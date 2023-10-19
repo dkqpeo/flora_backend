@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.flora.service.OrderServiceTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-10-19T10:15:18" hostname="jogeonhuis-MacBook-Air.local" time="0.165">
+  <properties/>
+  <testcase name="신규_주문()" classname="com.flora.service.OrderServiceTest" time="0.165"/>
+  <system-out><![CDATA[19:15:15.365 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+19:15:15.370 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+19:15:15.390 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.flora.service.OrderServiceTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+19:15:15.395 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.flora.service.OrderServiceTest], using SpringBootContextLoader
+19:15:15.398 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.flora.service.OrderServiceTest]: class path resource [com/flora/service/OrderServiceTest-context.xml] does not exist
+19:15:15.399 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.flora.service.OrderServiceTest]: class path resource [com/flora/service/OrderServiceTestContext.groovy] does not exist
+19:15:15.399 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.flora.service.OrderServiceTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+19:15:15.399 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.flora.service.OrderServiceTest]: OrderServiceTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+19:15:15.420 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.flora.service.OrderServiceTest]
+19:15:15.449 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/chogunhee/intellij_workspace/Flora/build/classes/java/main/com/flora/FloraApplication.class]
+19:15:15.449 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.flora.FloraApplication for test class com.flora.service.OrderServiceTest
+19:15:15.502 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.flora.service.OrderServiceTest]: using defaults.
+19:15:15.502 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener]
+19:15:15.510 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@54a3ab8f, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@1968a49c, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6a1ebcff, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@19868320, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@50b0bc4c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@c20be82, org.springframework.test.context.transaction.TransactionalTestExecutionListener@13c612bd, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3ef41c66, org.springframework.test.context.event.EventPublishingTestExecutionListener@6b739528, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@622ef26a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@41de5768, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5f577419, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@28fa700e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3d526ad9, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@e041f0c]
+19:15:15.515 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@1e287667 testClass = OrderServiceTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@2e6ee0bc testClass = OrderServiceTest, locations = '{}', classes = '{class com.flora.FloraApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@14c01636, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@5b40ceb, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@36546a22, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@64dafeed, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@619bfe29, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@2a7ed1f], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::      (v2.7.17-SNAPSHOT)
+
+2023-10-19 19:15:15.708  INFO [,,] 14481 --- [    Test worker] com.flora.service.OrderServiceTest       : Starting OrderServiceTest using Java 11.0.18 on jogeonhuis-MacBook-Air.local with PID 14481 (started by chogunhee in /Users/chogunhee/intellij_workspace/Flora)
+2023-10-19 19:15:15.708  INFO [,,] 14481 --- [    Test worker] com.flora.service.OrderServiceTest       : No active profile set, falling back to 1 default profile: "default"
+2023-10-19 19:15:16.144  INFO [,,] 14481 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-10-19 19:15:16.170  INFO [,,] 14481 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 2 JPA repository interfaces.
+2023-10-19 19:15:16.326  INFO [,,] 14481 --- [    Test worker] o.s.cloud.context.scope.GenericScope     : BeanFactory id=0b1f9614-6f31-33e7-ba97-c8210a9f6146
+2023-10-19 19:15:16.394  INFO [,,] 14481 --- [    Test worker] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.ws.config.annotation.DelegatingWsConfiguration' of type [org.springframework.ws.config.annotation.DelegatingWsConfiguration$$EnhancerBySpringCGLIB$$26fea95e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-10-19 19:15:16.432  INFO [,,] 14481 --- [    Test worker] .w.s.a.s.AnnotationActionEndpointMapping : Supporting [WS-Addressing August 2004, WS-Addressing 1.0]
+2023-10-19 19:15:16.727  INFO [,,] 14481 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-10-19 19:15:16.756  INFO [,,] 14481 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-10-19 19:15:16.851  INFO [,,] 14481 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-10-19 19:15:16.905  INFO [,,] 14481 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-10-19 19:15:17.118  INFO [,,] 14481 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-10-19 19:15:17.133  INFO [,,] 14481 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL8Dialect
+2023-10-19 19:15:17.500  INFO [,,] 14481 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-10-19 19:15:17.505  INFO [,,] 14481 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-10-19 19:15:18.159  INFO [,,] 14481 --- [    Test worker] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2023-10-19 19:15:18.826  INFO [,,] 14481 --- [    Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2023-10-19 19:15:18.836  INFO [,,] 14481 --- [    Test worker] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2023-10-19 19:15:18.848  INFO [,,] 14481 --- [    Test worker] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2023-10-19 19:15:18.924  INFO [,,] 14481 --- [    Test worker] com.flora.service.OrderServiceTest       : Started OrderServiceTest in 3.386 seconds (JVM running for 4.039)
+Hibernate: 
+    select
+        userentity0_.seq as seq1_1_,
+        userentity0_.email as email2_1_,
+        userentity0_.password as password3_1_,
+        userentity0_.tel as tel4_1_,
+        userentity0_.user_id as user_id5_1_,
+        userentity0_.user_name as user_nam6_1_ 
+    from
+        user userentity0_ 
+    where
+        userentity0_.user_name=?
+Hibernate: 
+    insert 
+    into
+        shop
+        (address, date, detail_address, item, item_img, post_num, price, status, user_name, user_seq) 
+    values
+        (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+OrderService Test : 테스트 주문 성공
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
