@@ -23,9 +23,9 @@ class OrderServiceTest {
     void 신규_주문() {
         // 주문 요청시 전달해야 할 정보
         OrderReqDTO dto = new OrderReqDTO();
-        dto.setItem("test1");  // 상품 명
+        dto.setFlowerName("user1");  // 상품 명
         dto.setPrice(15000);  // 가격
-        dto.setItemImg("https://www.naver.com"); // 이미지 주소
+        dto.setFlowerImg("https://www.naver.com"); // 이미지 주소
         dto.setUserName("test1");  // 로그인 사용자 이름
         dto.setPostNum("12345");  // 우편번호
         dto.setAddress("서울특별시 강남구 강남동"); // 주소

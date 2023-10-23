@@ -11,6 +11,7 @@ public class SignUpReqDTO {
     private String password;
     private String userName;
     private String tel;
+    private String email;
 
     public static UserEntity toEntity(SignUpReqDTO dto){
         return UserEntity.builder()
@@ -18,6 +19,7 @@ public class SignUpReqDTO {
                 .password(dto.getPassword())
                 .userName(dto.getUserName())
                 .tel(dto.getTel())
+                .email(dto.getEmail())
                 .build();
     }
 }
