@@ -1,14 +1,19 @@
 package com.flora.service;
 
+import com.flora.dto.user.UpdateUserReqDTO;
+import com.flora.dto.user.UserRespDTO;
 import com.flora.dto.user.LoginReqDTO;
 import com.flora.dto.user.SignUpReqDTO;
 import com.flora.entity.UserEntity;
 import com.flora.repository.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.catalina.User;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -54,6 +59,43 @@ public class UserService {
             }
         }else{ // 조회 결과가 없다
             throw new IllegalArgumentException("일치하는 아이디가 없습니다!");
+        }
+    }
+
+    public List<UserRespDTO> findAll() {
+        // 회원 리스트 조회
+        List<UserEntity> all = userRepository.findAll();  // repository 클래스의 리턴은 무조건 Entity타입
+        List<UserRespDTO> userList = new ArrayList<>();
+        for (UserEntity userEntity : all) {
+            userList.add(new UserRespDTO(userEntity));
+        }
+        return userList;
+    }
+
+    public UserRespDTO userDetail(String id) {
+        // id를 기준으로 회원 상세 조회
+        Optional<UserEntity> byId = userRepository.findByUserId(id);   // 회원 Id를 기준으로 db조회
+
+        if (byId.isPresent()){  // 조회 성공
+            return new UserRespDTO(byId.get());
+        }else{  // 조회 결과가 없다
+            throw new NullPointerException("해당 회원을 찾을 수 없습니다.");
+        }
+    }
+
+    // 회원정보 수정 요청
+    @Transactional
+    public UserEntity update(UpdateUserReqDTO dto) {
+        String oldPw = dto.getOldPassword();
+        UserEntity oldInfo = userRepository.findByUserName(dto.getUserName());
+
+        if(oldInfo.getPassword().equals(oldPw)){
+            // 기존 비밀번호가 일치할 경우 정보수정 진행.
+            UserEntity updateInfo = dto.toEntity(dto);
+            return userRepository.save(updateInfo);
+        } else {
+            // 기존 비밀번호가 일치하지 않을 경우
+            throw new IllegalArgumentException("기존 비밀번호가 일치하지 않습니다!");
         }
     }
 }

@@ -41,7 +41,14 @@ public class OrderEntity {
     @Column
     private String detailAddress;  // 상세주소
 
-    @Column int status;  // 0 = 결제 대기, 1 = 결제 완료, 2 = 배송 준비중, 3 = 배송중, 4 = 배송완료.
+    @Column
+    private String fromUser; // 받는 사람
+
+    @Column
+    private String fromUserTel;  // 받는 사람 전화번호
+
+    @Column
+    private int status;  // 0 = 결제 대기, 1 = 결제 완료, 2 = 배송 준비중, 3 = 배송중, 4 = 배송완료.
 
     @ManyToOne
     @JoinColumn(name = "USER_SEQ")

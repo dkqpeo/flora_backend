@@ -26,17 +26,21 @@ class OrderServiceTest {
         dto.setFlowerName("user1");  // 상품 명
         dto.setPrice(15000);  // 가격
         dto.setFlowerImg("https://www.naver.com"); // 이미지 주소
-        dto.setUserName("test1");  // 로그인 사용자 이름
+        dto.setUserName("kim eun ji");  // 로그인 사용자 이름
         dto.setPostNum("12345");  // 우편번호
         dto.setAddress("서울특별시 강남구 강남동"); // 주소
         dto.setDetailAddress("101호");    // 상세주소
+        dto.setFromUser("강 덕배"); // 받는 사람
+        dto.setFromUserTel("01012345678"); // 받는 사람 전화번호
 
         UserEntity userEntity = userRepository.findByUserName(dto.getUserName());
 
+        System.out.println(userEntity);
+
         if (userEntity != null){
             dto.setUserSeq(userEntity);
-            orderRepository.save(dto.toEntity(dto));
-            System.out.println("OrderService Test : 테스트 주문 성공");
+
+            System.out.println("OrderService Test : 테스트 주문 성공" + orderRepository.save(dto.toEntity(dto)));
         } else {
             throw new IllegalArgumentException("일치하는 아이디가 없습니다!");
         }

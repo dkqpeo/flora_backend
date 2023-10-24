@@ -1,5 +1,7 @@
 package com.flora.controller;
 
+import com.flora.dto.user.UpdateUserReqDTO;
+import com.flora.dto.user.UserRespDTO;
 import com.flora.dto.user.LoginReqDTO;
 import com.flora.dto.Response;
 import com.flora.dto.user.SignUpReqDTO;
@@ -11,6 +13,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Api(tags = {"회원 관련"}, description = "회원 관련")
 @RestController
@@ -52,4 +56,50 @@ public class UserController {
         }
         return new Response<>(HttpStatus.OK, "로그인 성공!", result);
     }
+
+    // 회원목록 조회
+    @GetMapping("/list")
+    @ApiOperation(value = "회원 리스트")
+    public Response<?> list(){
+        List<UserRespDTO> list = userService.findAll();
+        return new Response<>(HttpStatus.OK, "회원 리스트", list);
+    }
+
+    // 회원상세 조회
+    @GetMapping("/{id}")
+    @ApiOperation(value = "회원 상세조회( 회원 id를 값으로 전달 )")
+    public Response<?> userDetail(@PathVariable String id){  // rest API 방식을 이용할 때 즉 경로상의 값을 가져올 때 PathVariable사용
+        UserRespDTO dto;
+        try{
+            dto = userService.userDetail(id);
+        } catch (Exception e){
+            return new Response<>(HttpStatus.NOT_FOUND, "회원 조회 실패", null);
+        }
+        return new Response<>(HttpStatus.OK, "회원 조회 성공", dto);
+    }
+
+    // 회원정보 수정
+    // 회원정보 수정 요청
+    @PutMapping("/update")
+    @ApiOperation(value = "회원 정보수정 요청")
+    public Response<?> updateUser(@RequestBody UpdateUserReqDTO dto){
+        UserEntity result;
+        try{
+            result = userService.update(dto);
+        }catch (IllegalArgumentException e){
+            return new Response<>(HttpStatus.NOT_FOUND, "기존 비밀번호 불일치", null);
+        }
+        log.info("userController updateUser Sucess");
+        return new Response<>(HttpStatus.OK, "회원정보 수정 완료", result);
+    }
+
+/*
+    // 회원정보 수정폼에 들어갈 데이터 요청
+    @GetMapping("/update/{id}")
+    @ApiOperation(value = "정보수정할 회원정보 요청")
+    public UserResponseDTO<UserRespDTO> editDetail(@PathVariable String id){  // rest API 방식을 이용할 때 즉 경로상의 값을 가져올 때 PathVariable사용
+        UserRespDTO dto = userService.userDetail(id);
+        return new UserResponseDTO<>(HttpStatus.OK, dto);
+    }
+    */
 }

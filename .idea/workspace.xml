@@ -6,15 +6,30 @@
   <component name="ChangeListManager">
     <list default="true" id="700ba66a-1711-4019-905a-35dfcde90aec" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/checksums/sha1-checksums.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.2.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/flora/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/flora/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/flora/dto/order/OrderReqDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/flora/dto/order/OrderReqDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/flora/entity/OrderEntity$OrderEntityBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/flora/entity/OrderEntity$OrderEntityBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/flora/entity/OrderEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/flora/entity/OrderEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/flora/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/flora/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/SignUpReqDTO.class.uniqueId2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserController.class.uniqueId1" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserController.class.uniqueId1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserService.class.uniqueId0" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/UserService.class.uniqueId0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/flora/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flora/controller/UserController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/flora/dto/order/OrderReqDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flora/dto/order/OrderReqDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/flora/dto/user/SignUpReqDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flora/dto/user/SignUpReqDTO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/flora/entity/OrderEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flora/entity/OrderEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/flora/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flora/repository/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/flora/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flora/service/UserService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/flora/service/OrderServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/flora/service/OrderServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,11 +110,11 @@
       <recent name="com.flora.service" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.flora.repository" />
       <recent name="com.flora.dto.user" />
+      <recent name="com.flora.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.FloraApplication">
+  <component name="RunManager" selected="Gradle.UserServiceTest.정보_수정">
     <configuration name="OrderServiceTest.신규_주문" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -124,6 +139,30 @@
       <ForceTestExec>true</ForceTestExec>
       <method v="2" />
     </configuration>
+    <configuration name="UserServiceTest.정보_수정" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.flora.service.UserServiceTest.정보_수정&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
     <configuration name="FloraApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <module name="Flora.main" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.flora.FloraApplication" />
@@ -133,6 +172,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.UserServiceTest.정보_수정" />
         <item itemvalue="Gradle.OrderServiceTest.신규_주문" />
       </list>
     </recent_temporary>
@@ -152,7 +192,7 @@
       <workItem from="1697465378317" duration="1421000" />
       <workItem from="1697707457867" duration="4805000" />
       <workItem from="1697976810731" duration="2000" />
-      <workItem from="1698049949462" duration="1739000" />
+      <workItem from="1698049949462" duration="13400000" />
     </task>
     <servers />
   </component>
