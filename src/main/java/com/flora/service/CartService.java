@@ -36,6 +36,7 @@ public class CartService {
         }
     }
 
+    // 회원의 장바구니 목록 조회
     public List<CartEntity> findUserCart(String name){
         UserEntity userEntity = userRepository.findByUserName(name);
 
@@ -45,5 +46,12 @@ public class CartService {
         else { // 조회 결과가 없다
             throw new IllegalArgumentException("일치하는 아이디가 없습니다!");
         }
+    }
+
+    @Transactional
+    // 아이템 삭제
+    public Boolean deleteItem(Long seq) {
+        cartRepository.deleteById(seq);
+        return true;
     }
 }

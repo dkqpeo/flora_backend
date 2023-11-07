@@ -37,6 +37,14 @@ public class CartController {
         return new Response<>(HttpStatus.OK,"장바구니 추가 완료", result);
     }
 
+    @DeleteMapping("/del/{seq}")
+    @ApiOperation(value = "아이템 삭제")
+    public Response<?> deleteItem(@PathVariable Long seq){
+        boolean result = cartService.deleteItem(seq);
+        return new Response<>(HttpStatus.OK, "아이템 삭제 성공", result);
+
+    }
+
     // 회원의 장바구니 목록 조회
     @GetMapping("/{name}")
     @ApiOperation(value = "회원의 장바구니 리스트")
