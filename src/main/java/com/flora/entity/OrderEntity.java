@@ -50,6 +50,9 @@ public class OrderEntity {
     @Column
     private int status;  // 0 = 결제 대기, 1 = 결제 완료, 2 = 배송 준비중, 3 = 배송중, 4 = 배송완료.
 
+    @Column
+    private String paymentKey; // 결제 성공 시 리턴되는 키 값
+
     @ManyToOne
     @JoinColumn(name = "USER_SEQ")
     private UserEntity userSeq;  // 구매자 정보
