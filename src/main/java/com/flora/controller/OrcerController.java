@@ -9,10 +9,9 @@ import io.swagger.annotations.ApiOperation;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @Api(tags = {"주문 관련"}, description = "주문 관련")
 @RestController
@@ -32,5 +31,18 @@ public class OrcerController {
             return new Response<>(HttpStatus.NOT_FOUND, "사용자 조회 실패", null);
         }
         return new Response<>(HttpStatus.OK,"주문 완료", result);
+    }
+
+    // 회원의 주문 목록 조회
+    @GetMapping("/{name}")
+    @ApiOperation(value = "회원의 장바구니 리스트")
+    public Response<?> list(@PathVariable String name){
+        List<OrderEntity> list;
+        try{
+            list = orderService.findUserOrder(name);
+        }catch (Exception e){
+            return new Response<>(HttpStatus.NOT_FOUND, "회원 조회 실패", null);
+        }
+        return new Response<>(HttpStatus.OK, "회원의 구매목록 리스트", list);
     }
 }

@@ -10,6 +10,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.List;
+
 @Service
 @RequiredArgsConstructor
 @Slf4j
@@ -24,6 +26,18 @@ public class OrderService {
         if(userEntity != null){
             dto.setUserSeq(userEntity);
             return orderRepository.save(dto.toEntity(dto));
+        }
+        else { // 조회 결과가 없다
+            throw new IllegalArgumentException("일치하는 아이디가 없습니다!");
+        }
+    }
+
+    // 회원의 주문 목록 조회
+    public List<OrderEntity> findUserOrder(String name) {
+        UserEntity userEntity = userRepository.findByUserName(name);
+
+        if(userEntity != null){
+            return orderRepository.findCartEntitiesByUserSeq(userEntity);
         }
         else { // 조회 결과가 없다
             throw new IllegalArgumentException("일치하는 아이디가 없습니다!");
